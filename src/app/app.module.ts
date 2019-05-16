@@ -10,6 +10,7 @@ import { FavoritesComponent } from './favorites/favorites.component';
 import { MyPostsComponent } from './my-posts/my-posts.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SignUpComponent } from './auth/sign-up/sign-up.component';
     FavoritesComponent,
     MyPostsComponent,
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

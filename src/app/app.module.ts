@@ -11,6 +11,7 @@ import { MyPostsComponent } from './my-posts/my-posts.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

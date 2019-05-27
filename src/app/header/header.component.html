@@ -11,14 +11,15 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">Home</a></li>
-        <li routerLinkActive="active"><a routerLink="/allposts">My Posts</a></li>
-        <li routerLinkActive="active"><a routerLink="/myposts">All Posts</a></li>
-        <li routerLinkActive="active"><a routerLink="/following">Following</a></li>
-        <li routerLinkActive="active"><a routerLink="/favorites">Favorites</a></li>
+        <li routerLinkActive="active" *ngIf="isLoggedIn"><a routerLink="/allposts">My Posts</a></li>
+        <li routerLinkActive="active" *ngIf="isLoggedIn"><a routerLink="/myposts">All Posts</a></li>
+        <li routerLinkActive="active" *ngIf="isLoggedIn"><a routerLink="/following">Following</a></li>
+        <li routerLinkActive="active" *ngIf="isLoggedIn"><a routerLink="/favorites">Favorites</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li routerLinkActive="active"><a routerLink="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li routerLinkActive="active"><a routerLink="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li routerLinkActive="active" *ngIf="isLoggedIn"><a routerLink="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
   </div>

@@ -18,6 +18,7 @@ export class HeaderComponent implements OnInit {
         this.isLoggedIn = true;
       } else {
         this.isLoggedIn = false;
+        firebase.auth().signOut();
       }
     });
   }

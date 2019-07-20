@@ -14,6 +14,7 @@ export class SignUpComponent implements OnInit {
   ngOnInit() {
   }
 
+  
   onSubmit (form: NgForm) {
 
     const fullname = form.value.fullname;
@@ -25,7 +26,18 @@ export class SignUpComponent implements OnInit {
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .then(userData => {
         userData.sendEmailVerification();
+
         console.log(userData);
+
+        return firebase.database().ref('users/' + userData.uid).set({
+          email: email,
+          uid: userData.uid,
+          registrationDate: new Date().toString(),
+          name: fullname
+        })
+          .then(() => {
+            firebase.auth().signOut();
+          });
       })
       .catch(err => {
         console.log(err);

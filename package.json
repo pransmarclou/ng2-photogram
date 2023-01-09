@@ -22,7 +22,7 @@
     "bootstrap": "^3.4.1",
     "core-js": "^2.5.4",
     "firebase": "^4.13.1",
-    "firebase-admin": "^8.2.0",
+    "firebase-admin": "^11.4.1",
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
     "rxjs": "~6.3.3",
